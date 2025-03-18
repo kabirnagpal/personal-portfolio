@@ -11,18 +11,11 @@
             background-color: #f8f9fa;
         }
         .hero {
-            background: url('https://source.unsplash.com/1600x900/?technology,ai') no-repeat center center;
+            background: url('images/IIM Raipur_Corporate Engagement Background.png') no-repeat center center;
             background-size: cover;
             color: white;
             text-align: center;
             padding: 80px 20px;
-        }
-        .card {
-            margin-bottom: 20px;
-        }
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: bold;
         }
         .profile-image {
             width: 150px;
@@ -30,6 +23,19 @@
             object-fit: cover;
             border-radius: 50%;
             margin-bottom: 20px;
+        }
+        .content-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .content-section img {
+            max-width: 40%;
+            border-radius: 10px;
+        }
+        .content-text {
+            max-width: 55%;
         }
     </style>
 </head>
@@ -43,12 +49,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#internships">Internships</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -56,76 +61,74 @@
     </nav>
 
     <div class="hero">
-        <img src="https://via.placeholder.com/150" alt="Kabir Nagpal" class="profile-image">
+        <img src="images/profile.jpg" alt="Kabir Nagpal" class="profile-image">
         <h1>Kabir Nagpal</h1>
-        <p class="lead">Data Scientist | AI Enthusiast | Researcher | Strategic Thinker</p>
+        <p class="lead">Data Scientist | AI Enthusiast | Researcher | Business Strategist</p>
     </div>
 
     <div class="container mt-4">
-        <div id="experience" class="card p-4">
-            <h2>Work Experience</h2>
-            <div class="accordion" id="experienceAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#exp1">
-                            Data Scientist - Zscaler (Aug 2023 - Present)
-                        </button>
-                    </h2>
-                    <div id="exp1" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Developing AI-driven security solutions that align with industry best practices and corporate objectives.</li>
-                                <li>Enhancing machine learning models to improve threat detection accuracy and streamline risk mitigation strategies.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#exp2">
-                            Associate Data Scientist - Zscaler (Aug 2022 - Aug 2023)
-                        </button>
-                    </h2>
-                    <div id="exp2" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Architected an advanced Large Language Model-driven system to empower customer intelligence and proactive security analysis.</li>
-                                <li>Optimized security policy workflows, increasing operational efficiency by 50% through data-driven insights.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <div id="about" class="content-section">
+            <div class="content-text">
+                <h2>About Me</h2>
+                <p>Currently pursuing an MBA at IIM Raipur, I bring a unique combination of technical expertise and strategic business acumen. As a former Data Scientist at Zscaler, I contributed to cutting-edge AI-driven security enhancements, authored research publications, and filed multiple patents. My core interests lie in leveraging AI and data analytics to drive impactful decisions in Finance and Operations. Passionate about innovation, problem-solving, and leadership, I am dedicated to shaping the future of business through data-driven strategies.</p>
+            </div>
+            <img src="images/about.jpg" alt="About Image">
+        </div>
+        
+        <div id="experience" class="content-section">
+            <img src="images/experience.jpg" alt="Experience Image">
+            <div class="content-text">
+                <h2>Professional Experience</h2>
+                <h4>Data Scientist - Zscaler (Aug 2022 - Jun 2024)</h4>
+                <ul>
+                    <li>Led AI-powered cybersecurity innovations, increasing detection accuracy by 90%.</li>
+                    <li>Developed a Large Language Model-driven system, streamlining customer analysis and reducing response time.</li>
+                    <li>Enhanced enterprise security policy engines, boosting efficiency by 50%.</li>
+                    <li>Published two research papers and contributed to five patent filings.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="internships" class="content-section">
+            <div class="content-text">
+                <h2>Internships</h2>
+                <h4>Machine Learning Intern - Zscaler (Jan 2022 - Aug 2022)</h4>
+                <ul>
+                    <li>Developed machine learning models for predictive threat intelligence.</li>
+                    <li>Researched and implemented cutting-edge AI algorithms for cybersecurity applications.</li>
+                </ul>
+                <h4>Data Science Intern - Locobuzz (May 2021 - Aug 2021)</h4>
+                <ul>
+                    <li>Designed multilingual AI models for sentiment analysis and customer engagement.</li>
+                    <li>Automated query resolution, reducing response times by 80%.</li>
+                </ul>
+            </div>
+            <img src="images/internship.jpg" alt="Internship Image">
+        </div>
+
+        <div id="publications" class="content-section">
+            <img src="images/publications.jpg" alt="Publications Image">
+            <div class="content-text">
+                <h2>Publications</h2>
+                <ul>
+                    <li><strong>Analysis of Various Supervised Machine Learning Algorithms for Intrusion Detection</strong></li>
+                    <li><strong>Sign Language Interpretation using Ensembled Deep Learning Models</strong></li>
+                    <li><strong>Sound Classification Using Residual Convolutional Networks</strong></li>
+                </ul>
             </div>
         </div>
 
-        <div id="certifications" class="card p-4">
-            <h2>Certifications</h2>
-            <div class="accordion" id="certificationsAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cert1">
-                            IBM Data Science Certification
-                        </button>
-                    </h2>
-                    <div id="cert1" class="accordion-collapse collapse" data-bs-parent="#certificationsAccordion">
-                        <div class="accordion-body">
-                            <p>Comprehensive training in data science methodologies, machine learning, and analytics.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cert2">
-                            Deep Learning Specialization - DeepLearning.ai
-                        </button>
-                    </h2>
-                    <div id="cert2" class="accordion-collapse collapse" data-bs-parent="#certificationsAccordion">
-                        <div class="accordion-body">
-                            <p>Specialized training in neural networks, convolutional networks, and deep learning applications.</p>
-                        </div>
-                    </div>
-                </div>
+        <div id="certifications" class="content-section">
+            <div class="content-text">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Database Management Essentials - University of Colorado</li>
+                    <li>Deep Learning Specialization - DeepLearning.ai</li>
+                    <li>Natural Language Processing Specialization - DeepLearning.AI</li>
+                    <li>IBM Data Science Professional Certificate</li>
+                </ul>
             </div>
+            <img src="images/certifications.jpg" alt="Certifications Image">
         </div>
     </div>
 </body>
