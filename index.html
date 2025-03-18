@@ -8,39 +8,69 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #eef2f7;
+            font-family: 'Poppins', sans-serif;
         }
         .hero {
-            background: url('images/IIM Raipur_Corporate Engagement Background.png') no-repeat center center;
+            background: url('images/1.png') no-repeat center center;
             background-size: cover;
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 120px 20px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
         }
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 170px;
+            height: 170px;
             object-fit: cover;
             border-radius: 50%;
             margin-bottom: 20px;
+            border: 4px solid white;
         }
         .content-section {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
+            padding: 50px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         .content-section img {
             max-width: 40%;
-            border-radius: 10px;
+            border-radius: 12px;
         }
         .content-text {
             max-width: 55%;
         }
+        .read-more {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .content-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            .content-section img {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            .read-more {
+                display: block;
+                color: blue;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .extra-content {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4 shadow">
         <div class="container">
             <a class="navbar-brand" href="#">Kabir Nagpal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -51,7 +81,6 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#internships">Internships</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -62,29 +91,20 @@
 
     <div class="hero">
         <img src="images/profile.jpg" alt="Kabir Nagpal" class="profile-image">
-        <h1>Kabir Nagpal</h1>
-        <p class="lead">Data Scientist | AI Enthusiast | Researcher | Business Strategist</p>
+        <h1 class="fw-bold">Kabir Nagpal</h1>
+        <p class="lead">Data Scientist | AI Strategist | Research-Driven Innovator | Business Consultant</p>
     </div>
 
-    <div class="container mt-4">
-        <div id="about" class="content-section">
-            <div class="content-text">
-                <h2>About Me</h2>
-                <p>Currently pursuing an MBA at IIM Raipur, I bring a unique combination of technical expertise and strategic business acumen. As a former Data Scientist at Zscaler, I contributed to cutting-edge AI-driven security enhancements, authored research publications, and filed multiple patents. My core interests lie in leveraging AI and data analytics to drive impactful decisions in Finance and Operations. Passionate about innovation, problem-solving, and leadership, I am dedicated to shaping the future of business through data-driven strategies.</p>
-            </div>
-            <img src="images/about.jpg" alt="About Image">
-        </div>
-        
+    <div class="container mt-5">
         <div id="experience" class="content-section">
-            <img src="images/experience.jpg" alt="Experience Image">
+            <img src="images/3.png" alt="Experience Image">
             <div class="content-text">
                 <h2>Professional Experience</h2>
                 <h4>Data Scientist - Zscaler (Aug 2022 - Jun 2024)</h4>
                 <ul>
                     <li>Led AI-powered cybersecurity innovations, increasing detection accuracy by 90%.</li>
-                    <li>Developed a Large Language Model-driven system, streamlining customer analysis and reducing response time.</li>
-                    <li>Enhanced enterprise security policy engines, boosting efficiency by 50%.</li>
-                    <li>Published two research papers and contributed to five patent filings.</li>
+                    <li>Developed a Large Language Model-driven system, streamlining customer analysis.</li>
+                    <li>Published research papers and contributed to multiple patent filings.</li>
                 </ul>
             </div>
         </div>
@@ -94,26 +114,26 @@
                 <h2>Internships</h2>
                 <h4>Machine Learning Intern - Zscaler (Jan 2022 - Aug 2022)</h4>
                 <ul>
-                    <li>Developed machine learning models for predictive threat intelligence.</li>
-                    <li>Researched and implemented cutting-edge AI algorithms for cybersecurity applications.</li>
+                    <li>Developed predictive threat intelligence models using machine learning.</li>
+                    <li>Enhanced security AI frameworks to automate risk detection.</li>
                 </ul>
                 <h4>Data Science Intern - Locobuzz (May 2021 - Aug 2021)</h4>
                 <ul>
-                    <li>Designed multilingual AI models for sentiment analysis and customer engagement.</li>
-                    <li>Automated query resolution, reducing response times by 80%.</li>
+                    <li>Designed multilingual AI sentiment analysis models.</li>
+                    <li>Reduced query resolution time by 80% through AI automation.</li>
                 </ul>
             </div>
-            <img src="images/internship.jpg" alt="Internship Image">
+            <img src="images/5.png" alt="Internships Image">
         </div>
 
         <div id="publications" class="content-section">
-            <img src="images/publications.jpg" alt="Publications Image">
+            <img src="images/6.png" alt="Publications Image">
             <div class="content-text">
                 <h2>Publications</h2>
                 <ul>
-                    <li><strong>Analysis of Various Supervised Machine Learning Algorithms for Intrusion Detection</strong></li>
-                    <li><strong>Sign Language Interpretation using Ensembled Deep Learning Models</strong></li>
-                    <li><strong>Sound Classification Using Residual Convolutional Networks</strong></li>
+                    <li>Analysis of Various Supervised Machine Learning Algorithms for Intrusion Detection</li>
+                    <li>Sign Language Interpretation using Ensembled Deep Learning Models</li>
+                    <li>Sound Classification Using Residual Convolutional Networks</li>
                 </ul>
             </div>
         </div>
@@ -128,7 +148,7 @@
                     <li>IBM Data Science Professional Certificate</li>
                 </ul>
             </div>
-            <img src="images/certifications.jpg" alt="Certifications Image">
+            <img src="images/7.png" alt="Certifications Image">
         </div>
     </div>
 </body>
