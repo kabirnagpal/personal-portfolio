@@ -1,7 +1,68 @@
 <div class="content-section">
     <div class="content-text">
         <h2 class="fw-bold">About Me</h2>
-        <p>I am a passionate <strong>Data Scientist</strong> and <strong>AI Strategist</strong>.</p>
+        <p class="about-text">
+            I am a passionate <strong>Data Scientist</strong> and <strong>AI Strategist</strong>, currently pursuing an MBA at <strong>IIM Raipur</strong>. My expertise lies at the intersection of <strong>technology and business</strong>, allowing me to develop AI-driven solutions that optimize strategic decision-making and operational efficiency.
+        </p>
+        <p class="about-text">
+            With a strong foundation in <strong>cybersecurity, predictive analytics, and business intelligence</strong>, I have successfully developed <strong>scalable AI models</strong>, contributed to high-impact research, and filed multiple AI patents.
+        </p>
+        <p class="about-text extra-content">
+            My work focuses on leveraging AI for business transformation, bridging the gap between data-driven insights and enterprise growth. Passionate about solving complex problems, I thrive on building intelligent systems that drive innovation.
+        </p>
+        <span class="read-more" id="readMoreBtn" onclick="toggleReadMore()">Read More</span>
     </div>
     <img src="../images/2.png" alt="About Image">
 </div>
+
+<script>
+    function toggleReadMore() {
+        var moreText = document.querySelector(".extra-content");
+        var btnText = document.getElementById("readMoreBtn");
+
+        if (moreText.style.display === "none" || moreText.style.display === "") {
+            moreText.style.display = "inline";
+            btnText.style.display = "none";
+        }
+    }
+
+    function checkScreenSize() {
+        var moreText = document.querySelector(".extra-content");
+        var btnText = document.getElementById("readMoreBtn");
+
+        if (window.innerWidth > 768) {
+            moreText.style.display = "inline"; 
+            btnText.style.display = "none";
+        } else {
+            moreText.style.display = "none"; 
+            btnText.style.display = "inline";
+        }
+    }
+
+    window.onload = checkScreenSize;
+    window.onresize = checkScreenSize;
+</script>
+
+<style>
+    .about-text {
+        text-align: justify;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    .read-more {
+        color: blue;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .extra-content {
+        display: none;
+    }
+    @media (min-width: 769px) {
+        .extra-content {
+            display: inline !important;
+        }
+        .read-more {
+            display: none !important;
+        }
+    }
+</style>
