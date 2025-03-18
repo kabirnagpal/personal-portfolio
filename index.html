@@ -9,7 +9,13 @@
     <style>
         body {
             background-color: #f5f5f7;
-            font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'San Francisco', sans-serif;
+        }
+        .navbar {
+            background-color: #3a3a3a;
+        }
+        .content-container {
+            padding: 60px;
         }
         .hero {
             background: url('images/1.png') no-repeat center center;
@@ -30,42 +36,6 @@
             font-weight: 700;
             letter-spacing: 1px;
         }
-        .navbar {
-            background-color: #3a3a3a;
-        }
-        .content-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 80px;
-            padding: 60px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        .content-section img {
-            max-width: 40%;
-            border-radius: 15px;
-        }
-        .content-text {
-            max-width: 55%;
-            line-height: 1.6;
-        }
-        .content-text h4 {
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
-        @media (max-width: 768px) {
-            .content-section {
-                flex-direction: column;
-                text-align: center;
-                padding: 40px;
-            }
-            .content-section img {
-                max-width: 100%;
-                margin-bottom: 20px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -81,7 +51,6 @@
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#internships">Internships</a></li>
                     <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
                     <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -89,148 +58,35 @@
         </div>
     </nav>
     
-
     <div class="hero">
         <img src="images/profile.jpg" alt="Kabir Nagpal" class="profile-image">
         <h1 class="fw-bold">Kabir Nagpal</h1>
         <p class="lead">Data Scientist | AI Strategist | Research-Driven Innovator | Business Consultant</p>
     </div>
 
-    <div id="about" class="content-section">
-        <div class="content-text">
-            <h2 class="fw-bold">About Me</h2>
-            <p class="about-text">
-                I am a passionate <strong>Data Scientist</strong> and <strong>AI Strategist</strong>, currently pursuing an MBA at <strong>IIM Raipur</strong>. My expertise lies at the intersection of <strong>technology and business</strong>, allowing me to develop AI-driven solutions that optimize strategic decision-making and operational efficiency.
-            </p>
-            <p class="about-text">
-                With a strong foundation in <strong>cybersecurity, predictive analytics, and business intelligence</strong>, I have successfully developed <strong>scalable AI models</strong>, contributed to high-impact research, and filed multiple AI patents.
-            </p>
-            <p class="about-text extra-content">
-                My work focuses on leveraging AI for business transformation, bridging the gap between data-driven insights and enterprise growth. Passionate about solving complex problems, I thrive on building intelligent systems that drive innovation.
-            </p>
-            <span class="read-more" id="readMoreBtn" onclick="toggleReadMore()">Read More</span>
-        </div>
-        <img src="images/2.png" alt="About Image">
+    <div class="content-container">
+        <div id="about"></div>
+        <div id="experience"></div>
+        <div id="internships"></div>
+        <div id="publications"></div>
+        <div id="certifications"></div>
+        <div id="contact"></div>
     </div>
-    
+
     <script>
-        function toggleReadMore() {
-            var moreText = document.querySelector(".extra-content");
-            var btnText = document.getElementById("readMoreBtn");
-    
-            if (moreText.style.display === "none" || moreText.style.display === "") {
-                moreText.style.display = "inline";
-                btnText.style.display = "none";
-            }
+        function loadSection(sectionId, file) {
+            fetch('resources/' + file)
+                .then(response => response.text())
+                .then(data => document.getElementById(sectionId).innerHTML = data)
+                .catch(error => console.error('Error loading', file, error));
         }
-    
-        function checkScreenSize() {
-            var moreText = document.querySelector(".extra-content");
-            var btnText = document.getElementById("readMoreBtn");
-    
-            if (window.innerWidth > 768) {
-                moreText.style.display = "inline"; 
-                btnText.style.display = "none";
-            } else {
-                moreText.style.display = "none"; 
-                btnText.style.display = "inline";
-            }
-        }
-    
-        window.onload = checkScreenSize;
-        window.onresize = checkScreenSize;
+
+        loadSection("about", "about.html");
+        loadSection("experience", "experience.html");
+        loadSection("internships", "internships.html");
+        loadSection("publications", "publications.html");
+        loadSection("certifications", "certifications.html");
+        loadSection("contact", "contact.html");
     </script>
-    
-    <style>
-        .about-text {
-            text-align: justify;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-        .read-more {
-            color: blue;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .extra-content {
-            display: none;
-        }
-        @media (min-width: 769px) {
-            .extra-content {
-                display: inline !important;
-            }
-            .read-more {
-                display: none !important;
-            }
-        }
-    </style>
-    
-    <div class="container mt-5">
-        <div id="experience" class="content-section">
-            <img src="images/3.png" alt="Experience Image">
-            <div class="content-text">
-                <h2 class="fw-bold">Professional Experience</h2>
-                <h4>Data Scientist - Zscaler (Aug 2022 - Jun 2024)</h4>
-                <ul>
-                    <li>Developed enterprise-grade AI-powered cybersecurity solutions to enhance threat detection and mitigation.</li>
-                    <li>Strategically integrated machine learning models, boosting prediction accuracy and reducing latency by 40%.</li>
-                    <li>Collaborated cross-functionally with product teams to implement AI-driven threat intelligence pipelines.</li>
-                    <li>Published multiple research papers and secured intellectual property rights in AI-driven security methodologies.</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div id="internships" class="content-section">
-            <div class="content-text">
-                <h2 class="fw-bold">Internships</h2>
-                <h4>Machine Learning Intern - Zscaler (Jan 2022 - Aug 2022)</h4>
-                <ul>
-                    <li>Designed and deployed machine learning-driven predictive threat analytics models.</li>
-                    <li>Enhanced AI frameworks for real-time cybersecurity threat detection and response automation.</li>
-                </ul>
-                <h4>Data Science Intern - Locobuzz (May 2021 - Aug 2021)</h4>
-                <ul>
-                    <li>Built multilingual sentiment analysis models for global consumer insights.</li>
-                    <li>Automated query resolution workflows, optimizing customer support efficiency by 80%.</li>
-                </ul>
-            </div>
-            <img src="images/5.png" alt="Internships Image">
-        </div>
-
-        <div id="publications" class="content-section">
-            <img src="images/6.png" alt="Publications Image">
-            <div class="content-text">
-                <h2 class="fw-bold">Publications</h2>
-                <ul>
-                    <li>AI-Driven Intrusion Detection: A Comparative Study of ML Algorithms</li>
-                    <li>Sign Language Recognition: Leveraging Deep Learning for Inclusive Communication</li>
-                    <li>Neural Networks for Sound Classification in Cybersecurity Applications</li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="certifications" class="content-section">
-            <div class="content-text">
-                <h2 class="fw-bold">Certifications</h2>
-                <ul>
-                    <li>IBM AI Engineering Professional Certificate</li>
-                    <li>Deep Learning Specialization - DeepLearning.ai</li>
-                    <li>Google Cloud AI & Machine Learning Certification</li>
-                    <li>Data Engineering and Big Data Specialization</li>
-                </ul>
-            </div>
-            <img src="images/7.png" alt="Certifications Image">
-        </div>
-
-        <div id="contact" class="content-section">
-            <div class="content-text">
-                <h2 class="fw-bold">Contact Information</h2>
-                <p>Email: <a href="mailto:21kabirnagpal@gmail.com">21kabirnagpal@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/21kabirnagpal" target="_blank">linkedin.com/in/21kabirnagpal</a></p>
-            </div>
-            <img src="images/8.png" alt="Contact Image">
-        </div>
-
-    </div>
 </body>
 </html>
