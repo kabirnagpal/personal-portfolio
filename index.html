@@ -36,6 +36,38 @@
             font-weight: 700;
             letter-spacing: 1px;
         }
+        .content-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 80px;
+            padding: 60px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .content-section img {
+            max-width: 40%;
+            border-radius: 15px;
+        }
+        .content-text {
+            max-width: 55%;
+            line-height: 1.6;
+        }
+        .reverse {
+            flex-direction: row-reverse;
+        }
+        @media (max-width: 768px) {
+            .content-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px;
+            }
+            .content-section img {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -57,7 +89,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="hero">
         <img src="images/profile.jpg" alt="Kabir Nagpal" class="profile-image">
         <h1 class="fw-bold">Kabir Nagpal</h1>
