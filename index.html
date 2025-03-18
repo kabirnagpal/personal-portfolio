@@ -96,6 +96,68 @@
         <p class="lead">Data Scientist | AI Strategist | Research-Driven Innovator | Business Consultant</p>
     </div>
 
+    <div id="about" class="content-section">
+        <div class="content-text">
+            <h2 class="fw-bold">About Me</h2>
+            <p>
+                I am a dynamic **Data Scientist** and **AI Strategist**, currently pursuing an MBA at **IIM Raipur**, blending **technical expertise with business acumen**. With a strong foundation in **AI-driven cybersecurity, predictive analytics, and business intelligence**, I have successfully developed **scalable AI solutions**, filed **multiple patents**, and published **high-impact research papers**.  
+                <span id="moreAbout" class="extra-content">
+                    My expertise lies in **leveraging AI for business transformation**, **strategic decision-making**, and **operational efficiency**. I have spearheaded AI-powered solutions, optimizing **data-driven insights** for **enterprise-level growth**. Passionate about bridging the gap between **technology and business**, I thrive in solving **high-impact, real-world challenges** through **cutting-edge AI innovations**.
+                </span>
+            </p>
+            <span class="read-more" id="readMoreBtn" onclick="toggleReadMore()">Read More</span>
+        </div>
+        <img src="images/2.png" alt="About Image">
+    </div>
+    
+    <script>
+        function toggleReadMore() {
+            var moreText = document.getElementById("moreAbout");
+            var btnText = document.getElementById("readMoreBtn");
+    
+            if (moreText.style.display === "none" || moreText.style.display === "") {
+                moreText.style.display = "inline";
+                btnText.style.display = "none";
+            }
+        }
+    
+        // Automatically show all content on large screens
+        function checkScreenSize() {
+            var moreText = document.getElementById("moreAbout");
+            var btnText = document.getElementById("readMoreBtn");
+    
+            if (window.innerWidth > 768) {
+                moreText.style.display = "inline"; 
+                btnText.style.display = "none";
+            } else {
+                moreText.style.display = "none"; 
+                btnText.style.display = "inline";
+            }
+        }
+    
+        window.onload = checkScreenSize;
+        window.onresize = checkScreenSize;
+    </script>
+    
+    <style>
+        .read-more {
+            color: blue;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .extra-content {
+            display: none;
+        }
+        @media (min-width: 769px) {
+            .extra-content {
+                display: inline !important;
+            }
+            .read-more {
+                display: none !important;
+            }
+        }
+    </style>
+
     <div class="container mt-5">
         <div id="experience" class="content-section">
             <img src="images/3.png" alt="Experience Image">
