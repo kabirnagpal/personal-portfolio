@@ -8,71 +8,67 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
-            background-color: #eef2f7;
-            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f7;
+            font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
         .hero {
             background: url('images/1.png') no-repeat center center;
             background-size: cover;
-            color: white;
             text-align: center;
-            padding: 120px 20px;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 150px 20px;
+            color: black;
         }
         .profile-image {
-            width: 170px;
-            height: 170px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             border-radius: 50%;
             margin-bottom: 20px;
-            border: 4px solid white;
+        }
+        .hero h1, .hero p {
+            color: black;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
         .content-section {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 60px;
-            padding: 50px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 80px;
+            padding: 60px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         .content-section img {
             max-width: 40%;
-            border-radius: 12px;
+            border-radius: 15px;
         }
         .content-text {
             max-width: 55%;
+            line-height: 1.6;
         }
-        .read-more {
-            display: none;
+        .content-text h4 {
+            font-size: 1.3rem;
+            font-weight: bold;
         }
         @media (max-width: 768px) {
             .content-section {
                 flex-direction: column;
                 text-align: center;
-                padding: 30px;
+                padding: 40px;
             }
             .content-section img {
                 max-width: 100%;
                 margin-bottom: 20px;
             }
-            .read-more {
-                display: block;
-                color: blue;
-                cursor: pointer;
-                font-weight: bold;
-            }
-            .extra-content {
-                display: none;
-            }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4 shadow">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-4 shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#">Kabir Nagpal</a>
+            <a class="navbar-brand fw-bold" href="#">Kabir Nagpal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -99,28 +95,28 @@
         <div id="experience" class="content-section">
             <img src="images/3.png" alt="Experience Image">
             <div class="content-text">
-                <h2>Professional Experience</h2>
+                <h2 class="fw-bold">Professional Experience</h2>
                 <h4>Data Scientist - Zscaler (Aug 2022 - Jun 2024)</h4>
                 <ul>
-                    <li>Led AI-powered cybersecurity innovations, increasing detection accuracy by 90%.</li>
-                    <li>Developed a Large Language Model-driven system, streamlining customer analysis.</li>
-                    <li>Published research papers and contributed to multiple patent filings.</li>
+                    <li>Led strategic AI-driven cybersecurity initiatives, increasing detection efficiency by 90%.</li>
+                    <li>Developed and deployed Large Language Model solutions to enhance enterprise threat intelligence.</li>
+                    <li>Contributed to high-impact research and co-authored multiple publications and patents.</li>
                 </ul>
             </div>
         </div>
         
         <div id="internships" class="content-section">
             <div class="content-text">
-                <h2>Internships</h2>
+                <h2 class="fw-bold">Internships</h2>
                 <h4>Machine Learning Intern - Zscaler (Jan 2022 - Aug 2022)</h4>
                 <ul>
-                    <li>Developed predictive threat intelligence models using machine learning.</li>
-                    <li>Enhanced security AI frameworks to automate risk detection.</li>
+                    <li>Developed advanced threat intelligence models leveraging AI-driven automation.</li>
+                    <li>Optimized cybersecurity risk assessment using predictive modeling and deep learning.</li>
                 </ul>
                 <h4>Data Science Intern - Locobuzz (May 2021 - Aug 2021)</h4>
                 <ul>
-                    <li>Designed multilingual AI sentiment analysis models.</li>
-                    <li>Reduced query resolution time by 80% through AI automation.</li>
+                    <li>Engineered AI-powered sentiment analysis frameworks for multilingual markets.</li>
+                    <li>Implemented automation pipelines, reducing query resolution time by 80%.</li>
                 </ul>
             </div>
             <img src="images/5.png" alt="Internships Image">
@@ -129,23 +125,23 @@
         <div id="publications" class="content-section">
             <img src="images/6.png" alt="Publications Image">
             <div class="content-text">
-                <h2>Publications</h2>
+                <h2 class="fw-bold">Publications</h2>
                 <ul>
-                    <li>Analysis of Various Supervised Machine Learning Algorithms for Intrusion Detection</li>
-                    <li>Sign Language Interpretation using Ensembled Deep Learning Models</li>
-                    <li>Sound Classification Using Residual Convolutional Networks</li>
+                    <li>Comprehensive Analysis of AI-Powered Intrusion Detection Systems</li>
+                    <li>Sign Language Recognition using Deep Learning for Accessibility</li>
+                    <li>AI-Driven Sound Classification Models for Enhanced Security</li>
                 </ul>
             </div>
         </div>
 
         <div id="certifications" class="content-section">
             <div class="content-text">
-                <h2>Certifications</h2>
+                <h2 class="fw-bold">Certifications</h2>
                 <ul>
-                    <li>Database Management Essentials - University of Colorado</li>
+                    <li>IBM AI Engineering Professional Certificate</li>
                     <li>Deep Learning Specialization - DeepLearning.ai</li>
-                    <li>Natural Language Processing Specialization - DeepLearning.AI</li>
-                    <li>IBM Data Science Professional Certificate</li>
+                    <li>Google Cloud AI & Machine Learning Certification</li>
+                    <li>Data Engineering and Big Data Specialization</li>
                 </ul>
             </div>
             <img src="images/7.png" alt="Certifications Image">
