@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kabir Nagpal - Portfolio</title>
+    <title>Kabir Nagpal - Professional Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
             background-color: #f8f9fa;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?technology,ai') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
         }
         .card {
             margin-bottom: 20px;
@@ -16,6 +23,13 @@
         .navbar-brand {
             font-size: 1.5rem;
             font-weight: bold;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -32,59 +46,86 @@
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <div class="hero">
+        <img src="https://via.placeholder.com/150" alt="Kabir Nagpal" class="profile-image">
+        <h1>Kabir Nagpal</h1>
+        <p class="lead">Data Scientist | AI Enthusiast | Researcher | Strategic Thinker</p>
+    </div>
+
     <div class="container mt-4">
-        <div class="card text-center p-4">
-            <h1>Kabir Nagpal</h1>
-            <p class="lead">Data Scientist | AI Enthusiast | Researcher</p>
-        </div>
-        
-        <div id="about" class="card p-4">
-            <h2>About Me</h2>
-            <p>Pursuing MBA at Indian Institute of Management, Raipur. Former Data Scientist at Zscaler Softech India Pvt Ltd with expertise in Generative AI, Data Analysis, and Deep Learning.</p>
-        </div>
-        
-        <div id="education" class="card p-4">
-            <h2>Education</h2>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Indian Institute of Management, Raipur</strong> - General Management (2026, Pursuing)</li>
-                <li class="list-group-item"><strong>Manipal University, Jaipur</strong> - Bachelor of Technology (2022) - 91.50%</li>
-                <li class="list-group-item"><strong>St. Marks Sr Sec Public School</strong> - CBSE (2018) - 95.20%</li>
-            </ul>
-        </div>
-        
         <div id="experience" class="card p-4">
             <h2>Work Experience</h2>
-            <p><strong>Data Scientist, Zscaler Softech India Pvt Ltd (Aug 2022 - Jun 2024)</strong></p>
-            <ul>
-                <li>Developed Generative AI-based data loss protection system.</li>
-                <li>Increased accuracy to 90% and reduced latency to 50ms.</li>
-                <li>Identified upsell opportunities with 72% success rate.</li>
-                <li>Filed 3 patent applications.</li>
-            </ul>
+            <div class="accordion" id="experienceAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#exp1">
+                            Data Scientist - Zscaler (Aug 2023 - Present)
+                        </button>
+                    </h2>
+                    <div id="exp1" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Developing AI-driven security solutions that align with industry best practices and corporate objectives.</li>
+                                <li>Enhancing machine learning models to improve threat detection accuracy and streamline risk mitigation strategies.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#exp2">
+                            Associate Data Scientist - Zscaler (Aug 2022 - Aug 2023)
+                        </button>
+                    </h2>
+                    <div id="exp2" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Architected an advanced Large Language Model-driven system to empower customer intelligence and proactive security analysis.</li>
+                                <li>Optimized security policy workflows, increasing operational efficiency by 50% through data-driven insights.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div id="projects" class="card p-4">
-            <h2>Projects & Research</h2>
-            <ul>
-                <li>Built a multilingual search engine for Bajaj Finserv.</li>
-                <li>Achieved 97.24% accuracy in sign language recognition.</li>
-                <li>Published research in AI and intrusion detection.</li>
-            </ul>
-        </div>
-        
+
         <div id="certifications" class="card p-4">
             <h2>Certifications</h2>
-            <ul>
-                <li>Lean Six Sigma Green Belt - Grant Thornton</li>
-                <li>IBM Data Science Specialization</li>
-                <li>Data Visualization with Power BI</li>
-            </ul>
+            <div class="accordion" id="certificationsAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cert1">
+                            IBM Data Science Certification
+                        </button>
+                    </h2>
+                    <div id="cert1" class="accordion-collapse collapse" data-bs-parent="#certificationsAccordion">
+                        <div class="accordion-body">
+                            <p>Comprehensive training in data science methodologies, machine learning, and analytics.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cert2">
+                            Deep Learning Specialization - DeepLearning.ai
+                        </button>
+                    </h2>
+                    <div id="cert2" class="accordion-collapse collapse" data-bs-parent="#certificationsAccordion">
+                        <div class="accordion-body">
+                            <p>Specialized training in neural networks, convolutional networks, and deep learning applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
