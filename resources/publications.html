@@ -1,11 +1,77 @@
-<div class="content-section reverse">
-    <img src="../images/6.png" alt="Publications Image">
+<div class="content-section">
     <div class="content-text">
         <h2 class="fw-bold">Publications</h2>
-        <ul>
-            <li><strong>AI-Driven Intrusion Detection:</strong> A Comparative Study of ML Algorithms.</li>
-            <li><strong>Sign Language Recognition:</strong> Leveraging Deep Learning for Inclusive Communication.</li>
-            <li><strong>Neural Networks for Sound Classification:</strong> Applications in Cybersecurity.</li>
-        </ul>
+        
+        <div class="accordion" id="publicationsAccordion">
+            
+            <div class="accordion-item">
+                <h4 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#signLanguage" aria-expanded="true">
+                        <strong>Sign Language Interpretation using Ensembled Deep Learning Models</strong>
+                    </button>
+                </h4>
+                <div id="signLanguage" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
+                    <div class="accordion-body">
+                        <p><strong>EDP Sciences • Jun 1, 2023</strong></p>
+                        <p>Communication is an integral part of our daily lives. People with speech or hearing impairments often feel excluded. While Automatic Speech Recognition Systems have advanced, Signed Language Recognition Systems are still in their infancy. Our research proposes an ensembled deep learning architecture for classifying sign language characters, utilizing InceptionV3 and ResNet101 to achieve 97.24% accuracy on the ASL dataset.</p>
+                        <p><a href="https://www.itm-conferences.org/articles/itmconf/abs/2023/03/itmconf_icdsia2023_01003/itmconf_icdsia2023_01003.html" target="_blank">Read Full Publication</a></p>
+                        <p><strong>Citation:</strong> Khanna, Samarth, and Kabir Nagpal. "Sign Language Interpretation using Ensembled Deep Learning Models." ITM Web of Conferences. Vol. 53. EDP Sciences, 2023.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h4 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#intrusionDetection" aria-expanded="false">
+                        <strong>Analysis of Various Supervised Machine Learning Algorithms for Intrusion Detection</strong>
+                    </button>
+                </h4>
+                <div id="intrusionDetection" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Aug 28, 2022</strong></p>
+                        <p>With the growing complexity of cyber threats, our study explores the effectiveness of supervised machine learning techniques in intrusion detection systems. By utilizing the UNSW-NB15 dataset, we compared various ML models and achieved an accuracy of 88.7%, an F-score of 88.3%, and a false alarm rate of 0.014.</p>
+                        <p><a href="https://link.springer.com/chapter/10.1007/978-3-031-15784-4_3" target="_blank">Read Full Publication</a></p>
+                        <p><strong>Citation:</strong> Nagpal, Kabir, et al. "Analysis of Various Supervised Machine Learning Algorithms for Intrusion Detection." International Conference on Cyber Warfare, Security and Space Research. Cham: Springer International Publishing, 2021.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h4 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#soundClassification" aria-expanded="false">
+                        <strong>Sound Classification Using Residual Convolutional Network</strong>
+                    </button>
+                </h4>
+                <div id="soundClassification" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Nov 14, 2021</strong></p>
+                        <p>We introduce a novel deep learning model for classifying environmental sounds using the ESC-50 and Urban Sound datasets. Our CNN-based architecture, leveraging ResNet-type models, achieved 89.5% validation accuracy on environmental sounds and 96.76% accuracy on urban sound classification.</p>
+                        <p><a href="https://link.springer.com/chapter/10.1007/978-981-16-2641-8_23" target="_blank">Read Full Publication</a></p>
+                        <p><strong>Citation:</strong> Jangid, Mahesh, and Kabir Nagpal. "Sound Classification Using Residual Convolutional Network." Data Engineering for Smart Systems: Proceedings of SSIC 2021. Springer Singapore, 2022.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h4 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#weldingTexture" aria-expanded="false">
+                        <strong>Convolutional Neural Network for Image Processing of Friction Stir Welded and Conventional Welded Joints Texture</strong>
+                    </button>
+                </h4>
+                <div id="weldingTexture" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Dec 31, 2019</strong></p>
+                        <p>This research explores the classification of welding techniques using convolutional neural networks. Our model effectively distinguishes between Conventional Welding and Friction Stir Welding, an advanced solid-state technique used for difficult-to-weld alloys.</p>
+                        <p><a href="https://adrjournalshouse.com/index.php/Int-Journal-data-mining-computer/article/view/516" target="_blank">Read Full Publication</a></p>
+                        <p><strong>Citation:</strong> Mishra, Akshansh, and Kabir Nagpal. "Convolutional Neural Network for Image Processing of Friction Stir Welded and Conventional Welded Joints Texture." Int. J. Hum. Comput. Interact. Data Min 2 (2019): 5-9.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
     </div>
+    <img src="../images/6.png" alt="Publications Image">
 </div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
