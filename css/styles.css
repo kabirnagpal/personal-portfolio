@@ -44,8 +44,8 @@ body {
     display: block;
 }
 .content-text {
-    max-width: 55%;
     line-height: 1.6;
+    max-width: 100%; 
 }
 .reverse {
     display: flex;
