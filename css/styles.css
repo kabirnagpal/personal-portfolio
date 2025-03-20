@@ -64,7 +64,8 @@ body {
 }
 
 .content-section img {
-    max-width: 45%;
+    max-width: 40%;
+    padding: 40px;
     border-radius: 12px;
     height: auto;
     display: block;
@@ -98,6 +99,7 @@ body {
     .content-section img {
         max-width: 90%;
         margin-bottom: 20px;
+        padding: 10px;
     }
     .content-text {
         max-width: 100%;
