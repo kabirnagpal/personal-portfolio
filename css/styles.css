@@ -55,7 +55,7 @@ body {
 @media (max-width: 768px) {
     .content-section {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         padding: 40px;
     }
     .content-section img {
