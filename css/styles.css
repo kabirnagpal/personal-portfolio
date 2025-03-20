@@ -26,7 +26,8 @@ body {
 }
 
 .hero {
-    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    background: url('../images/1.png') no-repeat center center;
+    background-size: cover;
     text-align: center;
     padding: 120px 20px;
     border-radius: 12px;
@@ -75,7 +76,7 @@ body {
 
 .content-text {
     line-height: 1.8;
-    max-width: 50%;
+    max-width: 100%;
 }
 .content-text h2 {
     font-size: 2rem;
@@ -91,7 +92,7 @@ body {
 @media (max-width: 768px) {
     .content-section {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         padding: 40px;
     }
     .content-section img {
