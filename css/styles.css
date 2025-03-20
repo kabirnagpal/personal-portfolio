@@ -59,7 +59,7 @@ body {
         padding: 40px;
     }
     .content-section img {
-        max-width: 40%;
+        max-width: 100%;
         margin-bottom: 20px;
     }
 }
