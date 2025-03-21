@@ -10,5 +10,6 @@ loadSection("experience", "experience.html");
 loadSection("internships", "internships.html");
 loadSection("publications", "publications.html");
 loadSection("certifications", "certifications.html");
+loadSection("achievements", "achievements.html");
 loadSection("volunteer", "volunteer.html");
 loadSection("contact", "contact.html");
