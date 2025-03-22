@@ -25,6 +25,34 @@ body {
     padding: 80px 10%;
 }
 
+.accordion-item {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-bottom: 1rem;
+}
+
+.accordion-button {
+    width: 100%;
+    background-color: #f8f9fa;
+    font-size: 1.1rem;
+    padding: 1rem 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e0f0ff;
+    font-weight: bold;
+}
+
+.accordion-body {
+    background-color: #ffffff;
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid #dee2e6;
+}
+
+
 .hero {
     background: url('../images/1.png') no-repeat center center;
     background-size: cover;
