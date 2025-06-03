@@ -6,6 +6,7 @@ function loadSection(sectionId, file) {
 }
 
 loadSection("about", "about.html");
+loadSection("education", "education.html");
 loadSection("experience", "experience.html");
 loadSection("internships", "internships.html");
 loadSection("publications", "publications.html");
