@@ -82,30 +82,28 @@ body {
 
 .content-section {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-bottom: 60px;
-    padding: 50px;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    margin: 2rem 0;
 }
 
+.content-text {
+    flex: 1;
+    max-width: 100%;
+}
 .content-section img {
-    max-width: 40%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
     padding: 40px;
     border-radius: 12px;
-    height: auto;
     display: block;
     transition: transform 0.3s;
 }
 .content-section img:hover {
     transform: scale(1.05);
-}
-
-.content-text {
-    line-height: 1.8;
-    max-width: 100%;
 }
 .content-text h2 {
     font-size: 2rem;
@@ -121,14 +119,12 @@ body {
 @media (max-width: 768px) {
     .content-section {
         flex-direction: column;
-        text-align: left;
-        padding: 40px;
     }
+    
     .content-section img {
-        max-width: 90%;
-        margin-bottom: 20px;
-        padding: 10px;
+        max-width: 100%;
     }
+    
     .content-text {
         max-width: 100%;
     }
