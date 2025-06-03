@@ -25,27 +25,6 @@ body {
     padding: 80px 10%;
 }
 
-section {
-    padding: 4rem 0;
-    margin: 2rem 0;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-}
-
-.section-divider {
-    height: 2px;
-    background: linear-gradient(90deg, #f8f9fa 0%, #e9ecef 50%, #f8f9fa 100%);
-    margin: 3rem 0;
-}
-
-h2 {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 3px solid #007bff;
-    display: inline-block;
-}
-
 .accordion-item {
     border: none;
     border-radius: 8px;
@@ -55,12 +34,6 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.accordion-item {
-    margin-bottom: 1rem;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-}
-
 .accordion-button {
     width: 100%;
     background-color: #f8f9fa;
@@ -68,30 +41,15 @@ h2 {
     padding: 1rem 1.25rem;
 }
 
-.accordion-button {
-    background-color: #f8f9fa;
-    padding: 1.25rem;
-}
-
 .accordion-button:not(.collapsed) {
     background-color: #e0f0ff;
     font-weight: bold;
-}
-
-.accordion-button:not(.collapsed) {
-    background-color: #e7f1ff;
-    color: #0056b3;
 }
 
 .accordion-body {
     background-color: #ffffff;
     padding: 1.25rem 1.5rem;
     border-top: 1px solid #dee2e6;
-}
-
-.accordion-body {
-    padding: 1.5rem;
-    background-color: #ffffff;
 }
 
 
@@ -124,28 +82,30 @@ h2 {
 
 .content-section {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    width: 100%;
-    margin: 2rem 0;
+    margin-bottom: 60px;
+    padding: 50px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.content-text {
-    flex: 1;
-    max-width: 100%;
-}
 .content-section img {
-    max-width: 300px;
-    height: auto;
-    object-fit: contain;
+    max-width: 40%;
     padding: 40px;
     border-radius: 12px;
+    height: auto;
     display: block;
     transition: transform 0.3s;
 }
 .content-section img:hover {
     transform: scale(1.05);
+}
+
+.content-text {
+    line-height: 1.8;
+    max-width: 100%;
 }
 .content-text h2 {
     font-size: 2rem;
@@ -161,12 +121,14 @@ h2 {
 @media (max-width: 768px) {
     .content-section {
         flex-direction: column;
+        text-align: left;
+        padding: 40px;
     }
-    
     .content-section img {
-        max-width: 100%;
+        max-width: 90%;
+        margin-bottom: 20px;
+        padding: 10px;
     }
-    
     .content-text {
         max-width: 100%;
     }
