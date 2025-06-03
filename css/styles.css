@@ -103,7 +103,12 @@ body {
     transform: scale(1.05);
 }
 
+.content‐img:empty {
+  display: none;
+}
+
 .content-text {
+    flex: 1;
     line-height: 1.8;
     max-width: 100%;
 }
