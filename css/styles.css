@@ -34,7 +34,7 @@ body {
 
 /* ── Hero ──────────────────────────────────────────────── */
 .hero {
-    background: url('../images/1.png') no-repeat center center;
+    background: url('../images/iimraipur-background.png') no-repeat center center;
     background-size: cover;
     text-align: center;
     padding: 140px 20px 120px;
@@ -122,21 +122,25 @@ body {
     margin-bottom: 0.4rem;
 }
 
-.content-section img {
+/* Section decorative images — NOT logos or collage tiles */
+.content-section > img,
+.content-section .section-img {
     max-width: 38%;
     padding: 40px;
     border-radius: 12px;
     height: auto;
     display: block;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
-.content-section img:hover {
+.content-section > img:hover,
+.content-section .section-img:hover {
     transform: scale(1.04);
 }
 
-/* Hide image when src is missing / broken */
-.content-section img[src=""],
-.content-section img:not([src]) {
+/* Hide decorative image when src is missing / broken */
+.content-section > img[src=""],
+.content-section > img:not([src]) {
     display: none;
 }
 
@@ -213,6 +217,90 @@ body {
     display: none;
 }
 
+/* ── Accordion Logo ────────────────────────────────────── */
+.accordion-logo {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;   /* prevent flex from squishing it */
+    min-height: 32px;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    background: #fff;
+    padding: 3px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+    display: inline-block;
+}
+.accordion-button {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+/* ── Collage Panel ─────────────────────────────────────── */
+.collage-panel {
+    width: 38%;
+    min-width: 220px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px 20px 30px;
+}
+
+/* When only 1 logo item, fall back to a centered single tile */
+.collage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+
+/* Tile base */
+.collage-tile {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+.collage-tile:hover {
+    transform: rotate(0deg) scale(1.07);
+    box-shadow: 0 10px 32px rgba(0,0,0,0.16);
+    z-index: 2;
+}
+
+/* Size variants — set explicit px so children can inherit */
+.collage-sm  { width: 90px;  height: 90px;  }
+.collage-md  { width: 110px; height: 110px; }
+.collage-lg  { width: 130px; height: 130px; }
+
+/* The logo image inside a tile — use px not % so it doesn't collapse */
+.collage-tile img {
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.collage-sm  img { width: 58px;  height: 58px;  }
+.collage-md  img { width: 72px;  height: 72px;  }
+.collage-lg  img { width: 88px;  height: 88px;  }
+
 /* ── Responsive ────────────────────────────────────────── */
 @media (max-width: 768px) {
     .content-container {
@@ -223,7 +311,8 @@ body {
         text-align: left;
         padding: 30px;
     }
-    .content-section img {
+    .content-section > img,
+    .content-section .section-img {
         max-width: 90%;
         margin-top: 24px;
         margin-bottom: 0;
@@ -248,6 +337,32 @@ body {
     .extra-content {
         display: none;
     }
+    /* Collage on mobile: horizontal scroll strip */
+    .collage-panel {
+        width: 100%;
+        padding: 10px 0 0;
+        order: -1;
+    }
+    .collage {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 8px 4px 12px;
+        gap: 10px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .collage::-webkit-scrollbar { display: none; }
+    .collage-tile {
+        flex-shrink: 0;
+        transform: none !important;
+    }
+    .collage-sm  { width: 75px;  height: 75px;  }
+    .collage-md  { width: 90px;  height: 90px;  }
+    .collage-lg  { width: 105px; height: 105px; }
+    .collage-sm  img { width: 48px;  height: 48px;  }
+    .collage-md  img { width: 58px;  height: 58px;  }
+    .collage-lg  img { width: 70px;  height: 70px;  }
 }
 @media (min-width: 769px) {
     .extra-content {

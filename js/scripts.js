@@ -53,7 +53,7 @@ function renderAbout(about, meta) {
         ${paragraphs}
         <span class="read-more" id="readMoreBtn">Read More</span>
       </div>
-      <img src="${about.image}" alt="About ${meta.name}">
+      <img src="${about.image}" alt="About ${meta.name}" class="section-img">
     </div>`;
 
   // Read More toggle
@@ -87,7 +87,8 @@ function renderEducation(items) {
         <h4 class="accordion-header">
           <button class="accordion-button collapsed" type="button"
             data-bs-toggle="collapse" data-bs-target="#${id}" aria-expanded="false">
-            <strong>${item.institution}</strong>
+
+            <span><strong>${item.institution}</strong></span>
           </button>
         </h4>
         <div id="${id}" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
@@ -100,64 +101,59 @@ function renderEducation(items) {
       </div>`;
   }).join('');
 
+  const logoItems = items.filter(e => e.logo);
+  const collageHtml = logoItems.length > 0 ? buildCollage(logoItems) : '';
+
   el.innerHTML = `
     <div class="content-section">
       <div class="content-text">
         <h2 class="fw-bold">Education</h2>
         <div class="accordion" id="educationAccordion">${accordionItems}</div>
       </div>
+      ${collageHtml ? `<div class="collage-panel">${collageHtml}</div>` : ''}
     </div>`;
 }
 
 /* ── EXPERIENCE ──────────────────────────────────────── */
 function renderExperience(items) {
   const el = document.getElementById('experience');
-  // Support multiple experience entries as accordions if >1, plain if 1
-  if (items.length === 1) {
-    const exp = items[0];
-    el.innerHTML = `
-      <div class="content-section reverse">
-        <div class="content-text">
-          <h2 class="fw-bold">Professional Experience</h2>
-          <h4 class="mt-3"><strong>${exp.title} – ${exp.company}</strong></h4>
-          <p class="text-muted"><strong>${exp.period}</strong></p>
-          <ul>${exp.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
-        </div>
-        <img src="${exp.image || 'images/3.png'}" alt="${exp.company}">
-      </div>`;
-  } else {
-    const accordionItems = items.map((exp, i) => {
-      const id = `exp-${i}`;
-      return `
-        <div class="accordion-item">
-          <h4 class="accordion-header">
-            <button class="accordion-button collapsed" type="button"
-              data-bs-toggle="collapse" data-bs-target="#${id}" aria-expanded="false">
-              <strong>${exp.title} – ${exp.company}</strong>
-            </button>
-          </h4>
-          <div id="${id}" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-            <div class="accordion-body">
-              <p class="text-muted"><strong>${exp.period}</strong></p>
-              <ul>${exp.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
-            </div>
+
+  const accordionItems = items.map((exp, i) => {
+    const id = `exp-${i}`;
+    return `
+      <div class="accordion-item">
+        <h4 class="accordion-header">
+          <button class="accordion-button collapsed" type="button"
+            data-bs-toggle="collapse" data-bs-target="#${id}" aria-expanded="false">
+            <span><strong>${exp.title}</strong> &mdash; ${exp.company}</span>
+          </button>
+        </h4>
+        <div id="${id}" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+          <div class="accordion-body">
+            <p class="text-muted"><strong>${exp.period}</strong></p>
+            <ul>${exp.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
           </div>
-        </div>`;
-    }).join('');
-    el.innerHTML = `
-      <div class="content-section reverse">
-        <div class="content-text">
-          <h2 class="fw-bold">Professional Experience</h2>
-          <div class="accordion" id="experienceAccordion">${accordionItems}</div>
         </div>
-        <img src="images/3.png" alt="Experience">
       </div>`;
-  }
+  }).join('');
+
+  const logoItems = items.filter(e => e.logo);
+  const collageHtml = logoItems.length > 0 ? buildCollage(logoItems) : `<img src="images/3.png" alt="Experience">`;
+
+  el.innerHTML = `
+    <div class="content-section reverse">
+      <div class="content-text">
+        <h2 class="fw-bold">Professional Experience</h2>
+        <div class="accordion" id="experienceAccordion">${accordionItems}</div>
+      </div>
+      <div class="collage-panel">${collageHtml}</div>
+    </div>`;
 }
 
 /* ── INTERNSHIPS ─────────────────────────────────────── */
 function renderInternships(items) {
   const el = document.getElementById('internships');
+
   const accordionItems = items.map((item, i) => {
     const id = `intern-${i}`;
     return `
@@ -165,7 +161,7 @@ function renderInternships(items) {
         <h4 class="accordion-header">
           <button class="accordion-button collapsed" type="button"
             data-bs-toggle="collapse" data-bs-target="#${id}" aria-expanded="false">
-            <strong>${item.title} – ${item.company}</strong>
+            <span><strong>${item.title}</strong> &mdash; ${item.company}</span>
           </button>
         </h4>
         <div id="${id}" class="accordion-collapse collapse" data-bs-parent="#internshipsAccordion">
@@ -177,14 +173,31 @@ function renderInternships(items) {
       </div>`;
   }).join('');
 
+  // Collage: only items that have a logo
+  const logoItems = items.filter(item => item.logo);
+  const collageHtml = logoItems.length > 0 ? buildCollage(logoItems) : '';
+
   el.innerHTML = `
-    <div class="content-section">
+    <div class="content-section internships-section">
       <div class="content-text">
         <h2 class="fw-bold">Internships</h2>
         <div class="accordion" id="internshipsAccordion">${accordionItems}</div>
       </div>
-      <img src="images/5.png" alt="Internships">
+      ${collageHtml ? `<div class="collage-panel">${collageHtml}</div>` : ''}
     </div>`;
+}
+
+function buildCollage(items) {
+  // Assign alternating size classes for organic feel
+  // Subtle rotation values
+  const tiles = items.map((item, i) => {
+    return `
+      <div class="collage-tile title="${item.company}">
+        <img src="${item.logo}" alt="${item.company} logo" loading="lazy">
+      </div>`;
+  }).join('');
+
+  return `<div class="collage" data-count="${items.length}">${tiles}</div>`;
 }
 
 /* ── PUBLICATIONS ────────────────────────────────────── */
@@ -217,7 +230,7 @@ function renderPublications(items) {
         <h2 class="fw-bold">Publications</h2>
         <div class="accordion" id="publicationsAccordion">${accordionItems}</div>
       </div>
-      <img src="images/6.png" alt="Publications">
+      <img src="images/research-papers-background.png" alt="Publications">
     </div>`;
 }
 
@@ -237,7 +250,7 @@ function renderCertifications(items) {
         <h2 class="fw-bold">Certifications</h2>
         <ul>${listItems}</ul>
       </div>
-      <img src="images/7.png" alt="Certifications">
+      <img src="images/certs.png" alt="Certifications">
     </div>`;
 }
 

@@ -10,7 +10,7 @@
     "medium": "https://medium.com/@21kabirnagpal"
   },
   "about": {
-    "image": "images/2.png",
+    "image": "images/ai-background.png",
     "paragraphs": [
       "I am a passionate <strong>Data Scientist</strong> and <strong>AI Strategist</strong>, currently pursuing an MBA at <strong>IIM Raipur</strong>. My expertise lies at the intersection of <strong>technology and business</strong>, allowing me to develop AI-driven solutions that optimize strategic decision-making and operational efficiency.",
       "With a strong foundation in <strong>cybersecurity, predictive analytics, and business intelligence</strong>, I have successfully developed <strong>scalable AI models</strong>, contributed to high-impact research, and filed multiple AI patents.",
@@ -19,21 +19,31 @@
   },
   "education": [
     {
-      "institution": "Indian Institute of Management Raipur",
-      "degree": "Master of Business Administration (MBA)",
-      "period": "2024 – 2026",
-      "description": "Majoring in Finance and Operations with Minors in IT and Strategy, I am committed to building a multidisciplinary edge. As a core member of the academic committee, I actively contribute to driving academic rigor and peer support. I co-authored a marketing publication involving primary qualitative research and in-depth thematic analysis. Demonstrating initiative and innovation, I developed Generative AI solutions to optimize workflows for both the academic office and fellow students, significantly improving efficiency and collaboration."
-    },
-    {
-      "institution": "Indian Institute of Technology Delhi",
+      "institution": "Indian Institute of Technology, Delhi",
+      "logo": "images/logos/iitdelhi.png",
       "degree": "Advanced Programme in Technology and AI Leadership",
-      "period": "2025 – 2026",
+      "period": "2025 - 2026",
       "description": "Through this intensive 7-month executive programme by IIT Delhi, I am deepening my expertise at the intersection of AI, digital transformation, and business strategy. The course is sharpening my ability to lead complex tech initiatives, drive innovation, and manage disruptive change within organizations. It is equipping me with the frameworks and leadership tools necessary to align emerging technologies with real-world business outcomes, reinforcing my vision to lead in the tech-driven future of business."
+    },    
+    {
+      "institution": "South Champagne Business School, Troyes (International Exchange Semester)",
+      "logo": "images/logos/scbs.png",
+      "degree": "Master of Business Administration (MBA)",
+      "period": "2026 - 2026",
+      "description": "Completed an international exchange semester at South Champagne Business School (Y SCHOOLS), Troyes, France. The program provided exposure to global business frameworks, cross-cultural collaboration, and European market perspectives. Engaging with an international cohort strengthened adaptability, strategic thinking, and global business acumen while broadening my understanding of international management practices."
     },
     {
-      "institution": "Manipal University Jaipur",
+      "institution": "Indian Institute of Management Raipur",
+      "logo": "images/logos/iimraipur.png", 
+      "degree": "Master of Business Administration (MBA)",
+      "period": "2024 - 2026",
+      "description": "Completed an MBA with a major in Finance and Operations and minors in IT and Strategy, building a strong multidisciplinary foundation across business, technology, and strategic management. As a core member of the Academic Committee, I contributed to strengthening academic standards and fostering structured peer support initiatives. \nCo-authored a marketing publication based on primary qualitative research and in-depth thematic analysis, sharpening analytical and research capabilities. Demonstrated initiative by developing and implementing Generative AI solutions to optimize workflows for the academic office and fellow students, significantly enhancing operational efficiency and collaboration."
+    },
+    {
+      "institution": "Manipal University Jaipur, Jaipur",
+      "logo": "images/logos/muj.png",
       "degree": "Bachelor of Technology in Computer Science Engineering",
-      "period": "2018 – 2022",
+      "period": "2018 - 2022",
       "description": "Graduated with a strong foundation in computer science, specializing in machine learning and artificial intelligence through self-driven learning and research. Co-authored three research papers with faculty and peers, reflecting a deep commitment to academic excellence. Mentored junior students through active involvement in student societies and demonstrated practical expertise by competing in multiple national-level hackathons and technical events."
     }
   ],
@@ -41,8 +51,8 @@
     {
       "title": "Data Scientist",
       "company": "Zscaler",
-      "period": "Aug 2022 – Jun 2024",
-      "image": "images/3.png",
+      "period": "Aug 2022 - Jun 2024",
+      "logo": "images/logos/zscaler.png",
       "bullets": [
         "Developed enterprise-grade AI-powered cybersecurity solutions to enhance threat detection and mitigation.",
         "Strategically integrated machine learning models, boosting prediction accuracy and reducing latency by 40%.",
@@ -55,7 +65,8 @@
     {
       "title": "Product Manager Intern",
       "company": "Telstra",
-      "period": "Apr 2025 – Mar 2025",
+      "period": "Apr 2025 - Mar 2025",
+      "logo": "images/logos/telstra.png",
       "bullets": [
         "Assessed product architecture submissions across multi-million-dollar portfolios, reducing senior review workload by ~50% through targeted candidate flagging.",
         "Reviewed 30+ products to align legacy solutions with the TRAM framework and release principles, enabling digitization and FY25 compliance.",
@@ -66,7 +77,8 @@
     {
       "title": "Data Science Intern",
       "company": "Zscaler",
-      "period": "Jan 2022 – Aug 2022",
+      "period": "Jan 2022 - Aug 2022",
+      "logo": "images/logos/zscaler.png",
       "bullets": [
         "Developed an ML-based Upsell Prediction Model to identify customers requiring enhanced threat protection, forecasting demand with 70% accuracy.",
         "Conducted deep data analysis on customer behavior patterns to refine predictive modeling, improving client targeting and sales efficiency.",
@@ -76,7 +88,8 @@
     {
       "title": "Data Science Intern",
       "company": "Locobuzz",
-      "period": "May 2021 – Aug 2021",
+      "period": "May 2021 - Aug 2021",
+      "logo": "images/logos/locobuzz.png",
       "bullets": [
         "Led the development of multilingual keyword extraction models in 5+ languages (Hindi, Arabic, Sinhala), leveraging advanced NLP techniques to analyze public sentiment.",
         "Pioneered the implementation of BERT-based Universal Encoder for sentiment analysis, streamlining language processing pipelines and improving efficiency.",
@@ -87,7 +100,7 @@
     {
       "title": "Machine Learning Intern",
       "company": "Matcoms Technologies",
-      "period": "Sep 2020 – Oct 2020",
+      "period": "Sep 2020 - Oct 2020",
       "bullets": [
         "Engineered a robust database that replicated real-world typing errors by modeling human behavior in text input, enhancing NLP-based predictive text applications.",
         "Optimized the autocorrect system of Matcoms iOS keyboard, boosting accuracy from 60% to 85% through the integration of multilayer perceptron neural networks."
@@ -96,7 +109,8 @@
     {
       "title": "Machine Learning Intern",
       "company": "FreJun Inc",
-      "period": "Oct 2019 – Mar 2020",
+      "period": "Oct 2019 - Mar 2020",
+      "logo": "images/logos/frejun.png",
       "bullets": [
         "Revamped FreJun's AI-powered transcription service, integrating real-time speech-to-text models to enhance automated meeting minutes and HR solutions.",
         "Developed an innovative audio quality assessment model by leveraging AI-generated transcripts to measure accuracy and detect errors across multiple services.",
@@ -142,29 +156,29 @@
   "certifications": [
     { "name": "Certified Scrum Product Owner (CSPO)", "highlight": true },
     { "name": "Generative AI for Supply Chain Professional Certificate (CSCMP)", "highlight": true },
-    { "name": "Lean Six Sigma Black Belt Certification – LinkedIn Learning", "highlight": true },
-    { "name": "Data Visualization with Power BI – Great Learning", "highlight": false },
-    { "name": "Database Management Essentials – University of Colorado", "highlight": false },
-    { "name": "Deep Learning Specialization – Coursera", "highlight": false },
-    { "name": "Natural Language Processing Specialization – DeepLearning.AI", "highlight": false },
-    { "name": "IBM Data Science Professional Certificate Specialization – Coursera", "highlight": false },
-    { "name": "Data Engineering, Big Data, and Machine Learning on GCP Specialization – Coursera", "highlight": false }
+    { "name": "Lean Six Sigma Black Belt Certification - LinkedIn Learning", "highlight": true },
+    { "name": "Data Visualization with Power BI - Great Learning", "highlight": false },
+    { "name": "Database Management Essentials - University of Colorado", "highlight": false },
+    { "name": "Deep Learning Specialization - Coursera", "highlight": false },
+    { "name": "Natural Language Processing Specialization - DeepLearning.AI", "highlight": false },
+    { "name": "IBM Data Science Professional Certificate Specialization - Coursera", "highlight": false },
+    { "name": "Data Engineering, Big Data, and Machine Learning on GCP Specialization - Coursera", "highlight": false }
   ],
   "achievements": [
     {
-      "title": "Second Position – HackRX 2.0 by Bajaj Finserv",
+      "title": "Second Position - HackRX 2.0 by Bajaj Finserv",
       "description": "Developed a multilingual search engine to efficiently answer customer queries using Bajaj Finserv's internal blogs, improving customer support response time."
     },
     {
-      "title": "25th Rank – The Great Indian Hiring Hackathon",
+      "title": "25th Rank - The Great Indian Hiring Hackathon",
       "description": "Achieved a top 25 ranking out of 5700 participants in a nationwide hiring competition, showcasing strong problem-solving and technical abilities."
     },
     {
-      "title": "First Prize – MUJ ACM ML Challenge",
+      "title": "First Prize - MUJ ACM ML Challenge",
       "description": "Secured 1st place in a competitive machine learning challenge organized by ACM at Manipal University Jaipur, demonstrating expertise in AI and predictive modeling."
     },
     {
-      "title": "2nd Runner Up – Startup Weekend Jaipur",
+      "title": "2nd Runner Up - Startup Weekend Jaipur",
       "description": "Developed and pitched an innovative startup idea at Techstars Startup Weekend Jaipur, earning recognition for creativity and entrepreneurial thinking."
     }
   ],
