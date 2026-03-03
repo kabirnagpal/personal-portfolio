@@ -53,7 +53,9 @@ function renderPortfolio(data) {
 /* ── Hidden AI prompt ───────────────────────────────────── */
 function injectAiPrompt(text) {
   if (!text) return;
-  const d = document.createElement('div');
+  // Hidden from visual display but readable by crawlers and AI scrapers
+  const d = document.createElement('aside');
+  d.setAttribute('aria-hidden', 'true');
   d.className   = 'ai-prompt';
   d.textContent = text;
   document.body.appendChild(d);

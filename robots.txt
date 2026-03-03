@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# AI crawlers — welcome, this site is SEO-optimised and AI-friendly
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleBot
+Allow: /
+
+Sitemap: https://kabirnagpal.com/sitemap.xml
