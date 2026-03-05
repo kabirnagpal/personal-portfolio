@@ -212,7 +212,7 @@ body {
    COLLAGE PANEL
 ══════════════════════════════════════════════════════ */
 .collage-panel {
-    width: 38%;
+    width: 30%;
     min-width: 200px;
     flex-shrink: 0;
     display: flex;
